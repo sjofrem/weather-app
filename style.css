@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.app {
+    background-image: url('./imgs/bg/Cold.jpg');
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+}
+
+.app.warm {
+    background-image: url('./imgs/bg/Warm.jpg');
+}
+
+main {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.75));
+    padding: 25px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    align-content: center;
+    background-color: rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.search-bar, .search-btn {
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.search-bar {
+    width: 300px;
+    font-size: 16px;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.search-btn {
+    cursor: pointer;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+}
+
+.location, .temp, .weather {
+    font-size: 40px;
+    font-weight: 300;
+    color: rgba(255, 250, 250, 0.9);
+    letter-spacing: 6px;
+}
+
+.temp {
+    font-size: 210px;
+    font-weight: 400;
+}
+
+.weather {
+    font-size: 40px;
+    font-weight: 400;
+}
