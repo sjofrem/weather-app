@@ -1,13 +1,29 @@
-async function getJsonWeather(city) {
-    try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=2538e9ad7488cc7c4c9748d1aaa0987b`, {
-            mode: 'cors'
-        });
-        const cityWeather = await response.json();
-        console.log(cityWeather);
-    } catch (error) {
-        console.error(error)
+import weather from './modules/weather'
+import view from './modules/view'
+
+const searchForm = document.getElementById('search-form');
+const searchBar = document.getElementById('search-bar');
+
+async function displaySearch(city) {
+
+    const data = await weather.getData(city);
+    
+    if(!data) {
+        searchForm.reset();
+        return 
     }
+
+    view.setCityWeather(data);
+
 }
 
-getJsonWeather('London');
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    displaySearch(searchBar.value);
+
+    searchForm.reset();
+
+})
+
+displaySearch('London');
