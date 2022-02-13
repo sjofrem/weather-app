@@ -42,6 +42,7 @@ main {
 .search-bar, .search-btn {
     border: none;
     background-color: rgba(0,0,0,0);
+    color: snow;
 }
 
 .search-bar {
@@ -66,15 +67,15 @@ main {
     padding: 20px 40px;
 }
 
-.location, .temp, .weather, .humidity, .wind{
+.location, .temperature, .weather, .humidity, .wind{
     text-align: center;
     font-size: 25px;
     font-weight: 300;
-    color: rgba(255, 250, 250, 0.85);
+    color: rgba(255, 250, 250, 0.9);
     letter-spacing: 6px;
 }
 
-.temp {
+.temperature {
     font-size: 140px;
     font-weight: 300;
 }
@@ -113,7 +114,7 @@ main {
         width: 250px;
     }
 
-    .temp {
+    .temperature {
         font-size: 120px;
     }
 

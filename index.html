@@ -14,11 +14,11 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="app">
+    <div class="app" id="app">
         <main>
             <div class="search-container">
-                <form class="search-box">
-                    <input type="text" name="search-bar" placeholder="Search..." autocomplete="off" class="search-bar">
+                <form class="search-box" id="search-form">
+                    <input type="text" name="search-bar" placeholder="Search..." autocomplete="off" class="search-bar" id="search-bar">
                     <button type="submit" class="search-btn">
                         <span class="material-icons">
                             search
@@ -26,29 +26,29 @@
                     </button>
                 </form>
             </div>
-            <div class="location">London, GB</div>
+            <div class="location" id="location">London, GB</div>
             <div class="weather-container">
                 <div class="info-container">
                     <div class="weather">
-                        <img src="http://openweathermap.org/img/wn/01d@2x.png">
-                        <p>Sunny</p>
+                        <img id="weatherIcon" src="http://openweathermap.org/img/wn/01d@2x.png">
+                        <p id="currentWeather">Sunny</p>
                     </div>
                     <div class="extra-info">
                         <div class="humidity">
                             <span class="material-icons">
                                 water_drop
                             </span>
-                            <p>40%</p>
+                            <p id="humidity">40%</p>
                         </div>
                         <div class="wind">
                             <span class="material-icons">
                                 air
                             </span>
-                            <p>2.3 mph</p>
+                            <p id="wind">2.3 km/h</p>
                         </div>
                     </div>
                 </div>
-                <div class="temp">19°c</div>
+                <div class="temperature" id="temperature" >19°c</div>
             </div>
         </main>
     </div>
