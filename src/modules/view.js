@@ -1,12 +1,12 @@
 const view = (() => {
   function changeBackground(temperature) {
     const app = document.getElementById("app");
-    if (!app.classList.contains("cold")) {
-      if (temperature < 16) {
-        app.classList.add("cold");
+    if (!app.classList.contains("warm")) {
+      if (temperature > 16) {
+        app.classList.add("warm");
       }
-    } else if (temperature >= 16) {
-      app.classList.remove("cold");
+    } else if (temperature <= 16) {
+      app.classList.remove("warm");
     }
   }
 
