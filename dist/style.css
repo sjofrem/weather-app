@@ -8,14 +8,8 @@ body {
 }
 
 .app {
-  background-image: url("./imgs/bg/Cold.jpg");
   background-size: cover;
   background-position: bottom;
-  transition: 0.4 ease-out;
-}
-
-.app.warm {
-  background-image: url("./imgs/bg/Warm.jpg");
 }
 
 main {
