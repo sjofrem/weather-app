@@ -1,29 +1,26 @@
-import weather from './modules/weather'
-import view from './modules/view'
+import weather from "./modules/weather";
+import view from "./modules/view";
 
-const searchForm = document.getElementById('search-form');
-const searchBar = document.getElementById('search-bar');
+const searchForm = document.getElementById("search-form");
+const searchBar = document.getElementById("search-bar");
 
 async function displaySearch(city) {
+  const data = await weather.getData(city);
 
-    const data = await weather.getData(city);
-    
-    if(!data) {
-        searchForm.reset();
-        return 
-    }
+  if (!data) {
+    searchForm.reset();
+    return;
+  }
 
-    view.setCityWeather(data);
-
+  view.setCityWeather(data);
 }
 
-searchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    displaySearch(searchBar.value);
+  displaySearch(searchBar.value);
 
-    searchForm.reset();
+  searchForm.reset();
+});
 
-})
-
-displaySearch('London');
+displaySearch("London");
