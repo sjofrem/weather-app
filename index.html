@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
     <title>Weather App</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app" id="app">
-        <main>
-            <div class="search-container">
-                <form class="search-box" id="search-form">
-                    <input type="text" name="search-bar" placeholder="Search..." autocomplete="off" class="search-bar" id="search-bar">
-                    <button type="submit" class="search-btn">
-                        <span class="material-icons">
-                            search
-                        </span>
-                    </button>
-                </form>
+      <main>
+        <div class="search-container">
+          <form class="search-box" id="search-form">
+            <input
+              type="text"
+              name="search-bar"
+              placeholder="Search..."
+              autocomplete="off"
+              class="search-bar"
+              id="search-bar"
+            />
+            <button type="submit" class="search-btn">
+              <span class="material-icons"> search </span>
+            </button>
+          </form>
+        </div>
+        <div class="location" id="location">London, GB</div>
+        <div class="weather-container">
+          <div class="info-container">
+            <div class="weather">
+              <img
+                id="weatherIcon"
+                src="http://openweathermap.org/img/wn/01d@2x.png"
+              />
+              <p id="currentWeather">Sunny</p>
             </div>
-            <div class="location" id="location">London, GB</div>
-            <div class="weather-container">
-                <div class="info-container">
-                    <div class="weather">
-                        <img id="weatherIcon" src="http://openweathermap.org/img/wn/01d@2x.png">
-                        <p id="currentWeather">Sunny</p>
-                    </div>
-                    <div class="extra-info">
-                        <div class="humidity">
-                            <span class="material-icons">
-                                water_drop
-                            </span>
-                            <p id="humidity">40%</p>
-                        </div>
-                        <div class="wind">
-                            <span class="material-icons">
-                                air
-                            </span>
-                            <p id="wind">2.3 km/h</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="temperature" id="temperature" >19°c</div>
+            <div class="extra-info">
+              <div class="humidity">
+                <span class="material-icons"> water_drop </span>
+                <p id="humidity">40%</p>
+              </div>
+              <div class="wind">
+                <span class="material-icons"> air </span>
+                <p id="wind">2.3 km/h</p>
+              </div>
             </div>
-        </main>
+          </div>
+          <div class="temperature" id="temperature">19°c</div>
+        </div>
+      </main>
     </div>
-    
-</body>
+  </body>
 </html>
